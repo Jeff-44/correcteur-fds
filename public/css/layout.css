@@ -68,7 +68,7 @@ header{
 /* COMPOSE FORM */
 form {
     width: 50%;
-    height: 85vh;
+    height: 90vh;
     margin: 0 auto;
     /* border: 2px solid black; */
     border-radius: 5px;
@@ -78,6 +78,7 @@ form {
     align-items: center;  
     gap: 20px;
     padding: 0 15px;  
+    padding-top: 50px;
 }
 
 
