@@ -69,11 +69,11 @@ app.get("/articles", async (req, res)=>{
 });
 
 app.get("/articles/:id", async (req, res)=>{
-    dbConnection();
-    const { id } = req.params; 
     
+    const { id } = req.params; 
+    dbConnection();
     const article = await Article.findOne({_id: id});
-    res.render("article.ejs", 
+    res.render("post.ejs", 
     {
         article: article
     });
@@ -93,6 +93,27 @@ app.post("/compose", (req, res)=>{
 app.get("/article", (req, res)=>{
     res.render("article.ejs");
 });
+
+// ABOUT SECTION BEGIN--------------------------------------
+app.get("/about", (req, res)=>{
+    res.render("about.ejs");
+});
+// --ABOUT END---------------------------------------------
+
+// CONTACT SECTION BEGIN-----------------------------------
+
+// GET: CONTACT
+app.get("/contact", (req, res)=>{
+    res.render("contact.ejs");
+});
+
+// POST CONTACT
+app.post("/contact", (req, res)=>{
+    const inquiry = req.body;
+    res.send("success");
+});
+// --CONTACT END-------------------------------------------
+
 app.listen(port, ()=>{
     console.log(`Server running on port ${port}`);
 });

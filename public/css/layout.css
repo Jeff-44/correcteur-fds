@@ -8,10 +8,6 @@
 main {
     width: 100%;
     /* border: 2px solid orangered; */
-
-    /* display: flex;
-    flex-direction: column;
-    gap: 50px; */
 }
 
 header{
@@ -31,6 +27,7 @@ header{
 }
 .nav-menu ul{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     
@@ -48,7 +45,7 @@ header{
 
 .nav-menu ul li a:hover{
     text-decoration: underline;
-    color: black;
+    color: rgb(51, 48, 48);
 }
 
 .logo a{
@@ -63,21 +60,26 @@ header{
 }
 .logo a:hover{
     color: rgb(51, 48, 48);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 3px whitesmoke;
 }
 
 /* COMPOSE FORM */
 form {
     width: 50%;
+    height: 85vh;
     margin: 0 auto;
     /* border: 2px solid black; */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 15px;  
+    justify-content: center;
     align-items: center;  
-    margin-bottom: 119px;
+    gap: 20px;
+    padding: 0 15px;  
 }
+
 
 form *{
     width: 100%;
@@ -90,11 +92,9 @@ form input, textarea{
     border: none;
 }
 
-
 form input:focus, form textarea:focus{
     border: none;
 }
-
 
 form button{
     width: 100px;
@@ -149,6 +149,7 @@ form span{
     border: none;
     border-radius: 10px;
 }
+
 .title, .content{
     font-family: 'Times New Roman', Times, serif;
 }
@@ -158,7 +159,6 @@ form span{
     color: black;
 }
 
-
 /* FOOTER */
 footer{
     width: 100%;
@@ -166,8 +166,8 @@ footer{
     justify-content: center;
     align-items: center;   
     height: 100px; 
-    /* position: fixed;
-    bottom: 0; */
+    position: fixed;
+    bottom: 0;
     background-color: rgb(26, 25, 25);
 }
 
@@ -179,4 +179,3 @@ footer p{
     width: 10px;
     height: 20px;
 }
-
