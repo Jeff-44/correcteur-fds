@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+    <% if(locals.articles || articles.length !== 0){ %>
+        <div class="articles">
+            <% articles.map((article, index) =>{ %>
+                <div class="article">
+                    <h2 class="title"><a href="/articles/<%= article._id %>"><%= article.title %></a></h2>
+                    <p class="content"><%= article.content %></p>
+                    <div class="like-btn">
+                        <button>like</button><button>unlike</button>
+                    </div>
+                </div>    
+            <% }) %>
+        </div>
+    <% } else{ %>
+        <p>No articles...</p>
+    <% } %>
+<%- include("partials/footer") %>

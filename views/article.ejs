@@ -1,0 +1,12 @@
+<%- include("partials/header") %>
+
+<%  if(locals.article){ %>
+    <div class="article">
+        <h2><%= article.title %></h2>
+        <p><%= article.content %></p>
+    </div>
+<% }else{ %>
+    <p>Not Found...</p>
+<% } %>
+
+<%- include("partials/footer") %>
