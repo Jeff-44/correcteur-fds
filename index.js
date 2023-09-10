@@ -8,8 +8,9 @@ const app = express();
 const port = 3000;
 
 // MIDDLEWARES
-app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: true}));
+
 
 
 // CONNECTION 
@@ -68,7 +69,7 @@ app.get("/articles", async (req, res)=>{
     });
 });
 
-app.get("/articles/:id", async (req, res)=>{
+app.get("/article/:id", async (req, res)=>{
     
     const { id } = req.params; 
     dbConnection();
@@ -90,9 +91,7 @@ app.post("/compose", (req, res)=>{
     res.redirect("/articles");
 });
 
-app.get("/article", (req, res)=>{
-    res.render("article.ejs");
-});
+
 
 // ABOUT SECTION BEGIN--------------------------------------
 app.get("/about", (req, res)=>{
@@ -112,7 +111,12 @@ app.post("/contact", (req, res)=>{
     const inquiry = req.body;
     res.send("success");
 });
+
 // --CONTACT END-------------------------------------------
+
+app.get("/community", async(req, res)=>{
+    res.render("community.ejs");
+});
 
 app.listen(port, ()=>{
     console.log(`Server running on port ${port}`);

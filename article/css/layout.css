@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    width: 100%;
+    /* border: 2px solid orangered; */
+}
+
+header{
+    
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    position: fixed;
+    /* margin-bottom: 50px; */
+    /* display: none; */
+}
+.nav-menu{
+    width: 60%;
+}
+.nav-menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.nav-menu ul li{
+    list-style: none;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-menu ul li a:hover{
+    text-decoration: underline;
+    color: rgb(51, 48, 48);
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    font-family: cursive;
+    font-weight: 100;
+    
+}
+.logo a:hover{
+    color: rgb(51, 48, 48);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 3px whitesmoke;
+}
+
+/* COMPOSE FORM */
+form {
+    width: 50%;
+    height: 90vh;
+    margin: 0 auto;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap: 20px;
+    padding: 0 15px;  
+    padding-top: 50px;
+}
+
+
+form *{
+    width: 100%;
+}
+
+form input, textarea{
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 2px 0 rgb(171, 110, 228);
+    border: none;
+}
+
+form input:focus, form textarea:focus{
+    border: none;
+}
+
+form button{
+    width: 100px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: whitesmoke;
+    align-self: flex-start;
+}
+
+form span{
+    color: red;
+}
+/* ARTICLES */
+.articles{
+    width: 60%;
+    /* position: relative; */
+
+    /* border: 2px solid blue; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article .title a{
+    font-size: 1.5rem;
+    color: rgb(119, 115, 115);
+    text-decoration: none;
+}
+
+.like-btn{
+    display: flex;
+    gap: 10px    
+}
+
+.like-btn button{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: rgb(164, 155, 155);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.title, .content{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 100px; 
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(26, 25, 25);
+}
+
+footer p{
+    color: rgb(87, 82, 82);
+}
+
+.w{
+    width: 10px;
+    height: 20px;
+}
