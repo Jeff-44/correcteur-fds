@@ -87,10 +87,21 @@ app.get("/compose", (req, res)=>{
 app.post("/compose", (req, res)=>{
     const newArticle = new Article(req.body);
     dbConnection();
-    newArticle.save();
-    res.redirect("/articles");
-});
+    try {
+        const isArticleExists = Article.find({title: req.body.title});
+        console.log(isArticleExists);
 
+        if(isArticleExists){
+            console.log(req.body.title);
+            res.send("The title already exists");
+        } else{
+            newArticle.save();
+            res.redirect("/articles");
+        }
+    } catch (error) {
+        res.send(error.message);
+    }
+});
 
 
 // ABOUT SECTION BEGIN--------------------------------------

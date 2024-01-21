@@ -4,6 +4,20 @@
 <footer>
     <p>&copy; Correcteur <%= new Date().getFullYear(); %></p>
 </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
 <script src="js/index.js"></script>
+<script>
+    
+
+
+const editor = new EditorJS({
+  /**
+   * Id of Element that should contain Editor instance
+   */
+  holder: 'content-body'
+});
+</script>
 </body>
 </html>
