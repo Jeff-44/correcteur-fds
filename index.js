@@ -16,7 +16,8 @@ app.use(express.urlencoded({extended: true}));
 // CONNECTION 
 async function dbConnection(){
     try {
-       await mongoose.connect("mongodb://127.0.0.1:27017/correcteurDB");
+       //await mongoose.connect("mongodb://127.0.0.1:27017/correcteurDB");
+       await mongoose.connect("mongodb://mongo:FSbhleODTjljbagQsaAUKDNhWMXPYARF@autorack.proxy.rlwy.net:24832/correcteurDB");
         console.log("Connected to db");
     } catch (error) {
         console.log(error.message);
