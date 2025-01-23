@@ -2,6 +2,8 @@
 import express from "express";
 import ejs from "ejs";
 import mongoose from "mongoose";
+require("dotenv").config();
+const MONGO_URI = process.env.MONGO_URI;
 
 
 const app = express();
@@ -17,7 +19,12 @@ app.use(express.urlencoded({extended: true}));
 async function dbConnection(){
     try {
        //await mongoose.connect("mongodb://127.0.0.1:27017/correcteurDB");
-       await mongoose.connect("mongodb://mongo:FSbhleODTjljbagQsaAUKDNhWMXPYARF@autorack.proxy.rlwy.net:24832/correcteurDB");
+       await mongoose.connect(MONGO_URI,
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        }
+       );
         console.log("Connected to db");
     } catch (error) {
         console.log(error.message);
