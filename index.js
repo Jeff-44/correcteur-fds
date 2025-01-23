@@ -2,7 +2,9 @@
 import express from "express";
 import ejs from "ejs";
 import mongoose from "mongoose";
-require("dotenv").config();
+import dotenv from "dotenv";
+
+dotenv.config();
 const MONGO_URI = process.env.MONGO_URI;
 
 
